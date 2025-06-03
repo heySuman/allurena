@@ -1,0 +1,135 @@
+.about {
+  .about__section__row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-bottom: 7.5rem;
+
+    .about__section__row-1--col-1 {
+      font-family: "Poppins", sans-serif;
+      letter-spacing: -0.03em;
+      font-size: 0.9rem;
+    }
+
+    .about__section__row-1--col-2 {
+      font-family: "IvyMode", sans-serif;
+      font-size: 3.125rem;
+      margin: 0;
+      line-height: 1.2;
+      padding-bottom: 0.1rem;
+    }
+
+    .about__section__row-2--col-1 {
+      /* overflow: hidden; */
+      height: 25.25rem;
+      position: relative;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+      }
+
+      .row-2__absolute__image {
+        position: absolute;
+        top: 50%;
+        right: -20%;
+        transform: translate(0, -50%);
+
+        width: 150px;
+        height: 150px;
+
+        border-radius: 50%;
+        background: #f8f8f8;
+
+        div {
+          width: 100%;
+          height: 100%;
+          position: relative;
+
+          img {
+            position: absolute;
+            width: 200px;
+            height: 100px;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+
+    .about__section__row-2--col-2 {
+      .row-2__info {
+        width: 55%;
+        margin: 0 auto;
+
+        p {
+          font-size: 12px;
+          font-family: "Poppins", sans-serif;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .founders {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      font-family: "Poppins", sans-serif;
+
+      .founders__image {
+        width: 50px;
+        height: 50px;
+
+        position: relative;
+
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border: 1px solid #fff;
+          background: gray;
+          border-radius: 50%;
+
+          &:nth-child(2) {
+            left: 75%;
+          }
+        }
+      }
+
+      .founders__info {
+        h2 {
+          margin-bottom: 1rem;
+          font-size: 12px;
+          font-weight: 500;
+        }
+        p {
+          font-size: 10px;
+          color: #00000078;
+        }
+      }
+    }
+  }
+
+  position: relative;
+  .about__images {
+    img {
+      width: 200px;
+      height: auto;
+      position: absolute;
+      left: 52%;
+      bottom: 10%;
+      transform: translate(-50%, 0%);
+    }
+
+    video {
+      width: 350px;
+      height: auto;
+      position: absolute;
+      right: 2%;
+      bottom: 10%;
+      /* transform: translate(-50%, -50%); */
+    }
+  }
+}

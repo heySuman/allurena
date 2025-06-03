@@ -1,0 +1,122 @@
+header.section {
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  border-bottom: 1px solid rgba(36, 42, 46, 0.2);
+
+  font-family: "Poppins", sans-serif;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    min-height: 5rem;
+    align-items: center;
+    width: 100%;
+
+    .nav__columns.nav__column--1 {
+      display: flex;
+      gap: 2.5rem;
+      align-items: center;
+
+      .hamburger-menu {
+        min-width: 3.8rem;
+        height: 16px;
+
+        line-height: 1;
+
+        position: relative;
+
+        cursor: pointer;
+
+        &:hover {
+          > .bar-1,
+          .bar-3 {
+            width: 50%;
+            margin: 0 auto;
+          }
+        }
+
+        .bar {
+          position: absolute;
+          width: 50px;
+          height: 1px;
+          background: #000;
+          transition: all 0.3s ease;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        .bar-1 {
+          top: 0;
+        }
+
+        .bar-2 {
+          top: 6px;
+        }
+
+        .bar-3 {
+          top: 12px;
+        }
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 14px;
+        transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+
+        &:hover {
+          color: red;
+        }
+      }
+    }
+
+    .nav__columns.nav__column--3 {
+      display: flex;
+      gap: 2.5rem;
+      font-size: 12px;
+      line-height: 1.4;
+
+      .nav__column--3__item {
+        display: flex;
+        gap: 0.5rem;
+
+        span.icon {
+          width: 12px;
+
+          img {
+            transform: scale(0);
+            transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+          }
+        }
+
+        &:hover {
+          span.icon {
+            img {
+              transform: scale(1);
+            }
+          }
+
+          p:hover {
+            &::after {
+              transform: translate3d(0, 0, 0);
+            }
+
+            span {
+              transform: translate3d(0, 200%, 0);
+            }
+          }
+        }
+      }
+    }
+  }
+}
