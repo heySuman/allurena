@@ -1,5 +1,4 @@
 .section.about-about {
-
   .about-about__content__row {
     display: flex;
     flex-wrap: wrap;
@@ -81,5 +80,92 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .section.about-about {
+    .about-about__content__row {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
+
+      div {
+        width: fit-content;
+        font-family: "IvyMode", sans-serif;
+        font-size: 6.875rem;
+        font-weight: 400;
+        line-height: 1;
+        text-transform: uppercase;
+        display: flex;
+        position: relative;
+
+        img.heading__person {
+          margin-right: 1rem;
+          margin-left: 1rem;
+          vertical-align: middle;
+          width: auto;
+          height: 1em;
+          padding: 10px 0;
+        }
+
+        img.heading__shop {
+          width: auto;
+          height: 1em;
+          padding: 10px 0;
+        }
+
+        img.heading__shop__text {
+          padding: 10px 0;
+          width: auto;
+          height: 1em;
+          position: absolute;
+          animation: spin 15s linear infinite;
+        }
+
+        button {
+          background: #000;
+          color: #fff;
+          padding: 15px 25px;
+          border-radius: 40px;
+          font-weight: 500;
+          margin-right: 1rem;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          margin-left: 1rem;
+          font-family: "Poppins", sans-serif;
+
+          position: relative;
+
+          .button__svg {
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(300%, -50%);
+            background: #fff;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #000;
+
+            svg {
+              width: 1rem;
+              height: 1rem;
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 }

@@ -54,22 +54,22 @@
 
         position: relative;
 
-        .button__svg{
-            position: absolute;
-            top: 50%;
-            right: 50%;
-            transform: translate(300%, -50%);
-            background: #fff;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            border: 1px solid #000;
+        .button__svg {
+          position: absolute;
+          top: 50%;
+          right: 50%;
+          transform: translate(300%, -50%);
+          background: #fff;
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+          border: 1px solid #000;
 
-            svg{
-                width: 1rem;
-                height: 1rem;
-                color: #000;
-            }
+          svg {
+            width: 1rem;
+            height: 1rem;
+            color: #000;
+          }
         }
       }
     }
@@ -77,10 +77,37 @@
 }
 
 @keyframes spin {
-    from{
-        transform: rotate(0deg);
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media Query */
+
+@media screen and (min-width: 1300px) {
+  .section.home {
+    padding-top: 14rem;
+
+    .home__content__row {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
+
+      div {
+        width: fit-content;
+        font-family: "IvyMode", sans-serif;
+        /* font-size: 6.5rem; */
+        font-size: 6.875rem;
+        font-weight: 400;
+        line-height: 1;
+        text-transform: uppercase;
+        display: flex;
+        position: relative;
+      }
     }
-    to{
-        transform: rotate(360deg);
-    }
+  }
 }
